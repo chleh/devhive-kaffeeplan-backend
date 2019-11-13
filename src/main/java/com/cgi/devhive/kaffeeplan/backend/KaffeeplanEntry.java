@@ -11,12 +11,4 @@ public class KaffeeplanEntry {
     int week;
     String name;
     String email;
-
-    /*
-    public KaffeeplanEntry(int year, int week, String name, String email) {
-        this.year = year;
-        this.week = week;
-        this.name = name;
-        this.email = email;
-    }*/
 }
