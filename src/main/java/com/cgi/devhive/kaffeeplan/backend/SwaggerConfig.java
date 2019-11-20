@@ -1,3 +1,4 @@
+/*
 package com.cgi.devhive.kaffeeplan.backend;
 
 import org.springframework.context.annotation.Bean;
@@ -20,3 +21,4 @@ public class SwaggerConfig {
                 .build();
     }
 }
+*/
