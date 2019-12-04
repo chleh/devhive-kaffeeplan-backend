@@ -12,12 +12,13 @@ import java.io.Serializable;
 import java.util.Properties;
 
 public class YearWeekSequenceGenerator extends SequenceStyleGenerator {
-
+    //final String yearWeek =
 
     @Override
     public Serializable generate(SharedSessionContractImplementor session,
                                  Object object) throws HibernateException {
-        return "XXX" + super.generate(session, object);
+        return String.format("%06d", super.generate(session, object));
+        //return "XXX" + super.generate(session, object);
     }
 
     /*
