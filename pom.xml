@@ -104,7 +104,7 @@
                     <configuration>
                         <allowInsecureRegistries>true</allowInsecureRegistries>
                         <to>
-                            <image>pinfraprje8:5000/kaffeeplan/server:1.0</image>
+                            <image>pinfraprje8:5000/kaffeeplan/server:${version}</image>
                         </to>
                     </configuration>
                 </plugin>
