@@ -97,6 +97,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+                <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>jib-maven-plugin</artifactId>
+                    <version>1.8.0</version>
+                    <configuration>
+                        <allowInsecureRegistries>true</allowInsecureRegistries>
+                        <to>
+                            <image>pinfraprje8:5000/kaffeeplan/server:1.0</image>
+                        </to>
+                    </configuration>
+                </plugin>
         </plugins>
     </build>
 
