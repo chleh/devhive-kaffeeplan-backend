@@ -26,7 +26,10 @@ public class AutoRescheduleEntryTimer {
   }
 
   private void rescheduleUser(KaffeeplanEntry entry) {
-    // TODO: code logic
+    KaffeeplanEntry newEntry = new KaffeeplanEntry();
+    newEntry.setName(entry.getName());
+    newEntry.setEmail(entry.getEmail());
+    weeks.save(newEntry);
   }
 
   private Optional<KaffeeplanEntry> getNextUser() {
