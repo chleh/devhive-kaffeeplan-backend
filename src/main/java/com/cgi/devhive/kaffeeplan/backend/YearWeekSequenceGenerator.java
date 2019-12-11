@@ -10,7 +10,10 @@ import org.hibernate.type.LongType;
 import org.hibernate.type.Type;
 
 import java.io.Serializable;
-import java.sql.*;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Properties;
 
@@ -74,8 +77,7 @@ public class YearWeekSequenceGenerator extends SequenceStyleGenerator {
         }
     }
 
-    private static int[] getCurrentYearAndWeek()
-    {
+    public static int[] getCurrentYearAndWeek() {
         Calendar cal = Calendar.getInstance();
         // ISO week: https://stackoverflow.com/a/147193
         cal.setMinimalDaysInFirstWeek(4);
