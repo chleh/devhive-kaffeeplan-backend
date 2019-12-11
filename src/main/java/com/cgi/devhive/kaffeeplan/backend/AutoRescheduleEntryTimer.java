@@ -1,5 +1,6 @@
 package com.cgi.devhive.kaffeeplan.backend;
 
+import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,9 @@ public class AutoRescheduleEntryTimer {
   }
 
   private void rescheduleUser(KaffeeplanEntry entry) {
+    if (Strings.isEmpty(entry.getName()) || Strings.isEmpty(entry.getEmail()))
+      return;
+
     KaffeeplanEntry newEntry = new KaffeeplanEntry();
     newEntry.setName(entry.getName());
     newEntry.setEmail(entry.getEmail());
