@@ -21,7 +21,6 @@ public class YearWeekSequenceGenerator extends SequenceStyleGenerator {
     @Override
     public Serializable generate(SharedSessionContractImplementor session,
                                  Object objectToBePersisted) throws HibernateException {
-        // String.format("%06d", super.generate(session, objectToBePersisted));
         if (maxYearWeekW < 52) maxYearWeekW++;
         else {
             maxYearWeekW = 1;
